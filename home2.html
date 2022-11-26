@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="static\style2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,600,0,0" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <link rel="icon" type="img/png" href="{{ url_for('static', filename='logo5.png') }}" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script src="https://unpkg.com/howler@2.2.3/dist/howler.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/f6dcf461c1.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Home Page</title>
+</head>
+<body>
+  <div class="hero">
+    <nav>
+      <h2 class="logo">FPL <span>Radio</span></h2>
+      <ul>
+        <li><a href="{{ url_for('home') }}">HOME</a></li>
+        <li><a href="#">WELCOME TO YOUR ACCOUNT</a></li>
+        <li><a href="{{ url_for('sign') }}">LOGOUT</a></li>
+      </ul>
+      <div class="search">
+        <span class="icon">
+          <ion-icon name="search-outline" 
+          class="searchBtn"></ion-icon>
+          <ion-icon name="close-outline"
+          class="closeBtn"></ion-icon>
+        </span>
+      </div>
+      <div class="searchBox">
+        <input type="text" id="x" placeholder="Search here ..." onchange="openPage()">
+      </div>
+      <img src="static/moon.png" id="icon">
+    </nav>
+    <div> 
+      <span><h1 style="text-align: center;">FPL Project <br />Radio Music Stream</h1></span>
+      <div  class="special" >Welcome to Our FPL Platform of Music</div>
+    </div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="login-card-container">
+              <img src="static\\img\\Believer.jpg" alt="Imagine Dragon - Believer" id="btplay">
+              <h2 style="text-align: center; color: rgb(239, 228, 228);">Imagine Dragons - Believer</h2>
+              <div class="btns">
+                <Button onclick="Toggle1()" id="btnh1" class="btn"><i class="far fa-heart"></i></Button>
+              </div>
+            <audio id="Believer">
+              <source  src="static/music/Believer.mp3" type="audio/mpeg">
+           </audio>
+          </div>
+        </div>
+      <div class="swiper-slide">
+          <img src="static\\img\\Enemy.jpg" alt="Imagine Dragon - Enemy" id="btplay1">
+          <div class="btns">
+            <Button onclick="Toggle2()" id="btnh2" class="btn"><i class="fa fa-heart-o"></i></Button>
+           </div>
+          <h2 style="text-align: center; color: rgb(239, 228, 228);">Imagine Dragons - Enemy</h2>
+          <audio  id="Enemy">
+              <source src="static/music/Enemy.mp3" type="audio/mpeg">
+          </audio>
+      </div>
+      <div class="swiper-slide">
+        <img src="static\\img\\snap.jfif" alt="Rosa Linn - SNAP" id="btplay11">
+        <div class="btns">
+          <Button onclick="Toggle12()" id="btnh12" class="btn"><i class="fa fa-heart-o"></i></Button>
+        </div>
+        <h2 style="text-align: center; color: rgb(239, 228, 228);">Rosa Linn - Snap</h2>
+        <audio  id="snap">
+            <source src="static/music/SNAP.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      <div class="swiper-slide">
+          <img src="static\\img\\umbrella.jpg" alt="Rihanna - umbrella"  id="btplay2">
+          <div class="btns">
+            <Button  onclick="Toggle3()" id="btnh3" class="btn"><i class="fa fa-heart-o"></i></Button>
+           </div>
+          <h2 style="text-align: center; color: rgb(239, 228, 228);">Rihanna - Umbrella</h2>
+          <audio  id="Umbrella">
+              <source src="static/music/Umbrella.mp3" type="audio/mpeg">
+          </audio>
+      </div>
+      <div class="swiper-slide">
+          <img src="static\\img\\unstoppable.jpg" alt="Sia - Unstoppable" id="btplay3">
+          <div class="btns">
+            <Button  onclick="Toggle4()" id="btnh4" class="btn"><i class="fa fa-heart-o"></i></Button>
+           </div>
+          <h2 style="text-align: center; color: rgb(239, 228, 228);">Sia - Unstoppable</h2>
+          <audio  id="Unstoppable">
+              <source src="static/music/Unstoppable.mp3" type="audio/mpeg">
+          </audio>
+      </div>
+
+      <div class="swiper-slide">
+          <img src="static\\img\\diamonds.jpg" alt="Rihanna - Diamonds" id="btplay4">
+          <div class="btns">
+            <Button  onclick="Toggle5()" id="btnh5" class="btn"><i class="fa fa-heart-o"></i></Button>
+           </div>
+          <h2 style="text-align: center; color: rgb(239, 228, 228);">Rihanna - Diamonds</h2>
+          <audio   id="diamonds">
+              <source src="static/music/Diamonds.mp3" type="audio/mpeg">
+          </audio>
+      </div>
+      <div class="swiper-slide">
+          <img src="static\\img\\thunder.jfif" alt="Imagine Dragon - Thunder" id="btplay5">
+          <div class="btns">
+            <Button  onclick="Toggle6()" id="btnh6" class="btn"><i class="fa fa-heart-o"></i></Button>
+           </div>
+          <h2 style="text-align: center; color: rgb(239, 228, 228);">Imagine Dragon - Thunder</h2>
+          <audio  id="Thunder">
+              <source src="static/music/Thunder.mp3" type="audio/mpeg">
+          </audio>
+      </div>
+      <div class="swiper-slide">
+          <img src="static\\img\\dont.jpg" alt="The Chainsmokers - Dont Let Me Down" id="btplay6">
+          <div class="btns">
+            <Button  onclick="Toggle7()" id="btnh7" class="btn"><i class="fa fa-heart-o"></i></Button>
+           </div>
+          <h2 style="text-align: center; color: rgb(239, 228, 228);">The Chainsmokers - Dont Let Me Down</h2>
+          <audio  id="Dont">
+              <source src="static/music/DontLetMeDown.mp3" type="audio/mpeg">
+          </audio>
+      </div>
+      <div class="swiper-slide">
+          <img src="static\\img\\Look_What_You_Made_Me_Do.png" alt="Taylor Swift - Look What You Made Me Do" id="btplay7">
+          <div class="btns">
+            <Button  onclick="Toggle8()" id="btnh8" class="btn"><i class="fa fa-heart-o"></i></Button>
+           </div>
+          <h2 style="text-align: center; color: rgb(239, 228, 228);">Taylor Swift - Look What You Made Me Do</h2>
+          <audio  id="Look">
+              <source src="static/music/LookWhatYouMadeMeDo.mp3" type="audio/mpeg">
+          </audio>
+      </div>
+      <div class="swiper-slide">
+          <img src="static\\img\\Sweet_but_Psycho.jfif" alt="Ava Max - Sweet But Psycho" id="btplay8">
+          <div class="btns">
+            <Button  onclick="Toggle9()" id="btnh9" class="btn"><i class="fa fa-heart-o"></i></Button>
+           </div>
+          <h2 style="text-align: center; color: rgb(239, 228, 228);">Ava Max - Sweet But Psycho</h2>
+          <audio  id="Sweet">
+              <source src="static/music/SweetButPsycho.mp3" type="audio/mpeg">
+          </audio>
+      </div>
+      <div class="swiper-slide">
+          <img src="static\\img\\titanium.jfif" alt="David Guetta - Titanium" id="btplay9">
+          <div class="btns">
+            <Button  onclick="Toggle10()" id="btnh10" class="btn"><i class="fa fa-heart-o"></i></Button>
+          </div>
+          <h2 style="text-align: center; color: rgb(239, 228, 228);">David Guetta - Titanium</h2>
+
+          <audio  id="Titanium">
+              <source src="static/music/titanium.mp3" type="audio/mpeg">
+          </audio>
+         
+      </div>
+      <div class="swiper-slide">
+          <img src="static\\img\\price_tag.jpg" alt="Jessi J - Price Tag" id="btplay10">
+          <div class="btns">
+            <Button  onclick="Toggle11()" id="btnh11" class="btn"><i class="fa fa-heart-o"></i></Button>
+           </div>
+          <h2 style="text-align: center; color: rgb(239, 228, 228);">Jessi J - Price Tag</h2>
+          <audio id="Price">
+              <source src="static/music/PriceTag.mp3" type="audio/mpeg">
+          </audio>
+      </div>
+  </div>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+  </div>
+  <br/> <br/><br/>
+  <div class='audio-container'>
+    <audio  class="audioPlayer" controls autoplay id="switch" class="audiplay" style="width: 1000px;"> 
+    </audio>
+  </div>
+  <div class="login-card-social">
+    <div class="date">
+        &copy; <em id="date"></em>CREATED BY OUMAYMA BERRAADI - Supervised by PROFESSOR SAID LEKHAL
+    </div>
+    </div>
+    </div>
+ 
+  <!--<script src="https://cdn.jsdelivr.net/gh/sh20raj/AudiPlay/audiplay.min.js"></script>-->
+  <script>
+    var icon = document.getElementById("icon");
+
+    icon.onclick = function() 
+    {
+      document.body.classList.toggle("dark-theme");
+      if(document.body.classList.contains("dark-theme")){
+        icon.src ="static/sun.png";
+      }else{
+        icon.src = "static/moon.png";
+      }
+    }
+  </script>
+
+<script>   
+  var btnvar1 = document.getElementById('btnh1');
+
+  function Toggle1(){
+   if (btnvar1.style.color =="red") {
+      btnvar1.style.color = "grey"
+    }
+    else{
+      btnvar1.style.color = "red"
+    }
+     }
+    var btnvar2 = document.getElementById('btnh2');
+
+     function Toggle2(){
+              if (btnvar2.style.color =="red") {
+                  btnvar2.style.color = "grey"
+              }
+              else{
+                  btnvar2.style.color = "red"
+              }
+     }
+ 
+     var btnvar3 = document.getElementById('btnh3');
+
+     function Toggle3(){
+              if (btnvar3.style.color =="red") {
+                  btnvar3.style.color = "grey"
+              }
+              else{
+                  btnvar3.style.color = "red"
+              }
+     }
+
+     var btnvar4 = document.getElementById('btnh4');
+
+     function Toggle4(){
+              if (btnvar4.style.color =="red") {
+                  btnvar4.style.color = "grey"
+              }
+              else{
+                  btnvar4.style.color = "red"
+              }
+     }
+
+     var btnvar5 = document.getElementById('btnh5');
+
+     function Toggle5(){
+              if (btnvar5.style.color =="red") {
+                  btnvar5.style.color = "grey"
+              }
+              else{
+                  btnvar5.style.color = "red"
+              }
+     }
+ 
+     var btnvar6 = document.getElementById('btnh6');
+
+     function Toggle6(){
+              if (btnvar6.style.color =="red") {
+                  btnvar6.style.color = "grey"
+              }
+              else{
+                  btnvar6.style.color = "red"
+              }
+     }
+
+
+     var btnvar7 = document.getElementById('btnh7');
+
+    function Toggle7(){
+         if (btnvar7.style.color =="red") {
+             btnvar7.style.color = "grey"
+         }
+         else{
+             btnvar7.style.color = "red"
+         }
+    }
+
+var btnvar8 = document.getElementById('btnh8');
+
+function Toggle8(){
+         if (btnvar8.style.color =="red") {
+             btnvar8.style.color = "grey"
+         }
+         else{
+             btnvar8.style.color = "red"
+         }
+}
+
+var btnvar9 = document.getElementById('btnh9');
+
+function Toggle9(){
+         if (btnvar9.style.color =="red") {
+             btnvar9.style.color = "grey"
+         }
+         else{
+             btnvar9.style.color = "red"
+         }
+}
+
+var btnvar10 = document.getElementById('btnh10');
+
+function Toggle10(){
+         if (btnvar10.style.color =="red") {
+             btnvar10.style.color = "grey"
+         }
+         else{
+             btnvar10.style.color = "red"
+         }
+}
+
+var btnvar11 = document.getElementById('btnh11');
+
+function Toggle11(){
+  if (btnvar11.style.color =="red") {
+    btnvar11.style.color = "grey"
+  }
+  else{
+    btnvar11.style.color = "red"
+  }
+}
+
+
+var btnvar12 = document.getElementById('btnh12');
+
+function Toggle12(){
+  if (btnvar12.style.color =="red") {
+    btnvar12.style.color = "grey"
+  }
+  else{
+    btnvar12.style.color = "red"
+  }
+}
+  </script>
+<!--<script src="https://cdn.jsdelivr.net/gh/SH20RAJ/audiPlay/audiplay.js"></script>-->
+<script>
+
+let searchBtn = document.querySelector('.searchBtn');
+let closeBtn = document.querySelector('.closeBtn');
+let searchBox = document.querySelector('.searchBox');
+searchBtn.onclick = function(){
+  searchBox.classList.add('active');
+  closeBtn.classList.add('active');
+  searchBtn.classList.add('active'); 
+  }
+closeBtn.onclick =function(){
+  searchBox.classList.remove('active');
+  closeBtn.classList.remove('active');
+  searchBtn.classList.remove('active');
+} 
+
+  var switcher = document.getElementById("switch")
+
+  var MaMusic = document.getElementById("Believer")
+  var btplay = document.getElementById("btplay")
+    btplay.onclick=function(){
+      if(!switcher.paused) {
+        //MaMusic.pause();
+        switcher.pause();
+      } else {
+        MaMusic.play();
+        switcher.src = "static/music/Believer.mp3";
+        MaMusic.pause();
+        
+      }
+    }
+
+    var MaMusic1 = document.getElementById("diamonds")
+    var btplay1 = document.getElementById("btplay4")
+    btplay1.onclick=function(){
+     if(!switcher.paused) {
+       //MaMusic1.pause();
+       switcher.pause();
+      } else {
+        MaMusic1.play();
+        switcher.src = "static/music/Diamonds.mp3";
+        MaMusic1.pause();
+      }
+    }
+
+    var MaMusic2 = document.getElementById("Umbrella")
+    var btplay2 = document.getElementById("btplay2")
+    btplay2.onclick=function(){
+      if(!switcher.paused) {
+        switcher.pause();
+      } else {
+        MaMusic2.play();
+        switcher.src="static/music/Umbrella.mp3"
+        MaMusic2.pause();
+      }
+    }
+
+    var MaMusic3 = document.getElementById("Dont")
+    var btplay3 = document.getElementById("btplay6")
+    btplay3.onclick=function(){
+      if(!switcher.paused) {
+        switcher.pause();
+      } else {
+        MaMusic3.play();
+        switcher.src="static/music/DontLetMeDown.mp3"
+        MaMusic3.pause();
+      }
+    }
+    var MaMusic4 = document.getElementById("Thunder")
+    var btplay4 = document.getElementById("btplay5")
+    btplay4.onclick=function(){
+      if(!switcher.paused) {
+        switcher.pause();
+      } else {
+        MaMusic4.play();
+        switcher.src="static/music/Thunder.mp3"
+        MaMusic4.pause();
+      }
+    }
+
+    var MaMusic5 = document.getElementById("Look")
+    var btplay5 = document.getElementById("btplay7")
+    btplay5.onclick=function(){
+      if(!switcher.paused) {
+        switcher.pause();
+      } else {
+        MaMusic5.play();
+        switcher.src="static/music/LookWhatYouMadeMeDo.mp3"
+        MaMusic5.pause();
+      }
+    }
+    
+    var MaMusic6 = document.getElementById("Sweet")
+    var btplay6 = document.getElementById("btplay8")
+    btplay6.onclick=function(){
+      if(!switcher.paused) {
+        switcher.pause();
+      } else {
+        MaMusic6.play();
+        switcher.src="static/music/SweetButPsycho.mp3"
+        MaMusic6.pause();
+      }
+    }
+
+
+    var MaMusic7 = document.getElementById("Titanium")
+    var btplay7 = document.getElementById("btplay9")
+    btplay7.onclick=function(){
+      if(!switcher.paused) {
+        switcher.pause();
+      } else {
+        MaMusic7.play();
+        switcher.src="static/music/Titanium.mp3"
+        MaMusic7.pause();
+      }
+    }
+    var MaMusic8 = document.getElementById("Unstoppable")
+    var btplay8 = document.getElementById("btplay3")
+    btplay8.onclick=function(){
+      if(!switcher.paused) {
+        switcher.pause();
+      } else {
+        MaMusic8.play();
+        switcher.src="static/music/Unstoppable.mp3"
+        MaMusic8.pause();
+      }
+    }
+    var MaMusic9 = document.getElementById("Price")
+    var btplay9 = document.getElementById("btplay10")
+    btplay9.onclick=function(){
+      if(!switcher.paused) {
+        switcher.pause();
+      } else {
+        MaMusic9.play();
+        switcher.src="static/music/PriceTag.mp3"
+        MaMusic9.pause();
+      }
+    }
+
+    var MaMusic10 = document.getElementById("Enemy")
+    var btplay10 = document.getElementById("btplay1")
+    btplay10.onclick=function(){
+      if(!switcher.paused) {
+        switcher.pause();
+      } else {
+        MaMusic10.play();
+        switcher.src="static/music/Enemy.mp3"
+        MaMusic10.pause();
+      }
+    }
+
+    var MaMusic11 = document.getElementById("snap")
+    var btplay11 = document.getElementById("btplay11")
+    btplay11.onclick=function(){
+      if(!switcher.paused) {
+        switcher.pause();
+      } else {
+        MaMusic11.play();
+        switcher.src="static/music/SNAP.mp3"
+        MaMusic11.pause();
+      }
+    }
+
+    function openPage(){
+      var x = document.getElementById("x").value;
+      if(x === document.getElementById('Believer').id){
+        //window.open("https://www.w3schools.com");
+        switcher.src = "static/music/Believer.mp3";
+      }
+      if(x === document.getElementById('Enemy').id){
+        switcher.src = "static/music/Enemy.mp3";
+      }
+      if(x === document.getElementById('snap').id){
+        switcher.src = "static/music/SNAP.mp3";
+      }
+      if(x === document.getElementById('Unstoppable').id){
+        switcher.src = "static/music/Unstoppable.mp3";
+      }
+      if(x === document.getElementById('Umbrella').id){
+        switcher.src = "static/music/Umbrella.mp3";
+      }
+      
+      if(x === document.getElementById('Thunder').id){
+        switcher.src = "static/music/Thunder.mp3";
+      }
+
+      if(x === document.getElementById('diamonds').id){
+        switcher.src = "static/music/Diamonds.mp3";
+      }
+
+      if(x === document.getElementById('Dont').id){
+        switcher.src = "static/music/DontLetMeDown.mp3";
+      }
+
+      if(x === document.getElementById('Look').id){
+        switcher.src = "static/music/LookWhatYouMadeMeDo.mp3";
+      }
+
+      if(x === document.getElementById('Sweet').id){
+        switcher.src = "static/music/SweetButPsycho.mp3";
+      }
+       
+      if(x === document.getElementById('Titanium').id){
+        switcher.src = "static/music/titanium.mp3";
+      }
+
+      if(x === document.getElementById('Price').id){
+        switcher.src = "static/music/PriceTag.mp3";
+      }
+
+
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var mySwiper = new Swiper('.swiper-container', {
+    loop: true,
+    speed: 1000,
+    autoplay: {
+        delay: 3000,
+    },
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+        rotate: 0,
+        stretch: 80,
+        depth: 200,
+        modifier: 1,
+        slideShadows: false,
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static\style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,600,0,0" />
+    <link rel="icon" type="img/png" href="{{ url_for('static', filename='logo5.png') }}" >
+    <title>Create Account Page</title>
+</head>
+
+<body>
+    <div class="login-card-container">
+        <div class="login-card">
+            <div class="login-card-logo">
+                <img src="static\logo2.png" alt="logo">
+            </div>
+            <div class="login-card-header">
+                <h1>Create New Account</h1>
+                <div>Please Create Your Account for get the permission to use Our FPL platform of Music</div>
+            </div>
+            <form method="POST" class="login-card-form">
+
+                <div class="form-item">
+                    <span class="form-item-icon material-symbols-rounded">person</span>
+                    <input type="text" placeholder="Enter First Name" id="firstName" name="firstName" required>
+                </div>
+
+                <div class="form-item">
+                    <span class="form-item-icon material-symbols-rounded">home</span>
+                    <input type="text" placeholder="Enter Last Name" id="lastName" name="lastName" required>
+                </div>
+
+                <div class="form-item">
+                    <span class="form-item-icon material-symbols-rounded">mail</span>
+                    <input type="text" placeholder="Enter Email" id="email" name="email" required>
+                </div>
+                <div class="form-item">
+                    <span class="form-item-icon material-symbols-rounded">lock</span>
+                    <input type="password" placeholder="Enter Password" id="password" name="password" required>
+                </div>
+                <div>
+                    <input type="checkbox" id="agree" name="agree" autofocus required checked>
+                    <label for="agree">I Agree to the terms & Conditions</label>
+                </div>
+                <button type="submit">Sign Up</button>
+                <div class="login-card-footer">
+                    Already have an account?<a href="{{ url_for('sign') }}" style=" color:rgba(14, 58, 94, 0.866);">Sign In.</a>
+                </div>
+            </form>
+        </div>
+        <div class="login-card-social">
+            <div class="date">Other Sign-Up Options</div>
+            <div class="login-card-social-btns">
+                <a href="https://www.facebook.com/">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook"
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                    </svg>
+                </a>
+                <a href="https://accounts.google.com/ServiceLogin/signinchooser?flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=ARgdvAuyM-UDhIFf7zaur_XzGjM3qWx6CGcUaCFFxex3VG-6u76zdTpk3YnMI-CmehPX6Fi7AfwBHA">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-google" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M17.788 5.108a9 9 0 1 0 3.212 6.892h-8"></path>
+                    </svg>
+                </a>
+
+                <a href="https://twitter.com/login">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"></path>
+                     </svg>
+                </a>
+            </div>
+            <div class="date">
+                &copy; <em id="date"></em>CREATED BY OUMAYMA BERRAADI - Supervised by PROFESSOR SAID LEKHAL
+            </div>
+        </div>
+    </div>
+</body>
+</html>
